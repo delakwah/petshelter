@@ -1,0 +1,68 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}Adopt an Animal{% endblock %}
+
+{% block content %}
+<section id="adoption-form" class="py-5">
+    <div class="container px-5 my-5">
+        <h2 class="text-center mb-4">Adoption Form</h2>
+        <form method="post" id="contactForm" data-sb-form-api-token="API_TOKEN">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="pet-name">Pet Name:</label>
+                <input type="text" class="form-control" id="pet-name" value="{{ pet.name }}" readonly>
+                <input type="hidden" name="pet" value="{{ pet.id }}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="firstName">First Name</label>
+                <input class="form-control" id="firstName" name="fname" type="text" placeholder="First Name" required>
+                <div class="invalid-feedback">First Name is required.</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input class="form-control" id="lastName" name="lname" type="text" placeholder="Last Name" required>
+                <div class="invalid-feedback">Last Name is required.</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="age">Age</label>
+                <input class="form-control" id="age" name="age" type="number" placeholder="Age" required>
+                <div class="invalid-feedback">Age is required.</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="gender">Gender</label>
+                <select class="form-select" id="gender" name="gender" required>
+                    <option value="">Choose...</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="contactNumber">Contact Number</label>
+                <input class="form-control" id="contactNumber" name="phonenum" type="text" placeholder="Contact Number" required>
+                <div class="invalid-feedback">Contact Number is required.</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="emailAddress">Email Address</label>
+                <input class="form-control" id="emailAddress" name="email" type="email" placeholder="Email Address" required>
+                <div class="invalid-feedback">Email Address is required.</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="address">Address</label>
+                <input class="form-control" id="address" name="address" type="text" placeholder="Address" required>
+                <div class="invalid-feedback">Address is required.</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="occupation">Occupation</label>
+                <input class="form-control" id="occupation" name="occup" type="text" placeholder="Occupation" required>
+                <div class="invalid-feedback">Occupation is required.</div>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
+
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

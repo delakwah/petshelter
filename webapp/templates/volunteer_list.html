@@ -1,0 +1,40 @@
+{% extends "index_admin.html" %}
+{% load static %}
+
+{% block title %}Adoption Request{% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+    <h2>Volunteers</h2>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        {% for y in volunteer %}
+        <tbody>
+          <tr>
+            <th scope="row">{{y.id}}</th>
+            <td>{{y.firstname}}</td>
+            <td>{{y.lastname}}</td>
+            <td>{{y.age}}</td>
+            <td>{{y.gender}}</td>
+            <td>{{y.phonenum}}</td>
+            <td>{{y.email}}</td>
+          </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+<br>
+
+{% endblock %}

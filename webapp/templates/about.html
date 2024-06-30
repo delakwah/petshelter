@@ -1,0 +1,62 @@
+{% extends "index.html" %} 
+{% load static %}
+
+{% block title %} About Page {% endblock %}
+
+{%block content%}
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About Us</h2>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <p class="fs-5 font-monospace">Welcome to the Animal Adoption Center! Our mission is to provide a safe haven for abandoned and rescued animals and help them find loving forever homes. We believe that every animal deserves a chance to be loved and cared for, and we are dedicated to making that happen.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="{% static './images/bond.png' %}" class="img-fluid img-about" alt="About Us">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Team</h2>
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="{% static './images/kermit.jpg' %}" class="card-img-top" alt="Team Member 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">John Doe</h5>
+            <p class="card-text">Founder & Director</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="{% static './images/red.jpg' %}" class="card-img-top" alt="Team Member 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">Head of Operations</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="{% static './images/pink.jpg' %}" class="card-img-top" alt="Team Member 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mike Johnson</h5>
+            <p class="card-text">Lead Veterinarian</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mission" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Mission</h2>
+    <p class="fs-5 font-monospace">Our mission is to rescue, rehabilitate, and rehome animals in need. We strive to create a community where all animals are treated with respect and compassion. Through education, advocacy, and direct action, we aim to improve the lives of animals and promote responsible pet ownership.</p>
+  </div>
+</section>
+{% endblock %}

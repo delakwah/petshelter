@@ -1,0 +1,93 @@
+{% extends "index.html" %} 
+{% load static %}
+
+{% block title %} How to Adopt! {% endblock %}
+
+{% block content %}
+
+<section id="how-to-adopt" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">How to Adopt</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="adoptStepsAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="stepOneHeader">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#stepOne" aria-expanded="true" aria-controls="stepOne">
+                  Step 1: Research
+                </button>
+              </h2>
+              <div id="stepOne" class="accordion-collapse collapse show" aria-labelledby="stepOneHeader" data-bs-parent="#adoptStepsAccordion">
+                <div class="accordion-body">
+                  <p>Start by researching the type of pet that would best fit your lifestyle and living situation. Consider factors such as size, energy level, and any specific needs or traits of different breeds.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="stepTwoHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stepTwo" aria-expanded="false" aria-controls="stepTwo">
+                  Step 2: Visit the Shelter
+                </button>
+              </h2>
+              <div id="stepTwo" class="accordion-collapse collapse" aria-labelledby="stepTwoHeader" data-bs-parent="#adoptStepsAccordion">
+                <div class="accordion-body">
+                  <p>Visit our animal adoption center to meet the pets available for adoption. Spend time with them to understand their personalities and see which one you connect with the most.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="stepThreeHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stepThree" aria-expanded="false" aria-controls="stepThree">
+                  Step 3: Submit an Application
+                </button>
+              </h2>
+              <div id="stepThree" class="accordion-collapse collapse" aria-labelledby="stepThreeHeader" data-bs-parent="#adoptStepsAccordion">
+                <div class="accordion-body">
+                  <p>Fill out an adoption application form. This helps us understand more about you and ensure that the pet you are interested in is a good match for your home.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="stepFourHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stepFour" aria-expanded="false" aria-controls="stepFour">
+                  Step 4: Home Visit
+                </button>
+              </h2>
+              <div id="stepFour" class="accordion-collapse collapse" aria-labelledby="stepFourHeader" data-bs-parent="#adoptStepsAccordion">
+                <div class="accordion-body">
+                  <p>We may conduct a home visit to ensure that your living environment is safe and suitable for the pet you wish to adopt. This is a standard part of our process to ensure the well-being of our animals.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="stepFiveHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stepFive" aria-expanded="false" aria-controls="stepFive">
+                  Step 5: Finalize the Adoption
+                </button>
+              </h2>
+              <div id="stepFive" class="accordion-collapse collapse" aria-labelledby="stepFiveHeader" data-bs-parent="#adoptStepsAccordion">
+                <div class="accordion-body">
+                  <p>Once your application is approved and the home visit is completed, you can finalize the adoption. This includes signing the adoption agreement and paying the adoption fee.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="stepSixHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stepSix" aria-expanded="false" aria-controls="stepSix">
+                  Step 6: Bring Your New Pet Home
+                </button>
+              </h2>
+              <div id="stepSix" class="accordion-collapse collapse" aria-labelledby="stepSixHeader" data-bs-parent="#adoptStepsAccordion">
+                <div class="accordion-body">
+                  <p>Congratulations! It's time to bring your new pet home. Ensure you have all the necessary supplies and give your new furry friend time to adjust to their new environment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<br><br>
+{% endblock %}

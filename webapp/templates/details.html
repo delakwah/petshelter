@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}Animal Detail{% endblock %}
+
+{% block content %}
+<section id="animal-details" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">{{pets.name}} Details</h2>
+      <div class="row">
+        <div class="col-md-6">
+        {% if pets.pet_image.url %}
+          <img src="{{ pets.pet_image.url }}" class="img-fluid" alt="{{pets.name}} " style="max-width: 100%; height: auto;">
+        {% endif %}
+        </div>
+        <div class="col-md-6">
+          <h3>{{pets.name}}</h3>
+          <p><strong>Age:</strong> {{pets.age}}</p>
+          <p><strong>Breed:</strong> {{pets.breed}}</p>
+          <p><strong>Description:</strong> {{pets.desc}}</p>
+          <p><strong>Health:</strong> {{pets.health}}</p>
+          <a href="{% url 'adopt_form' pets.id %}" class="btn btn-primary mt-3">Adopt {{pets.name}}</a>
+          <a href="{% url 'steps' %}" class="btn btn-primary mt-3">How to adopt?</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+{% endblock %}

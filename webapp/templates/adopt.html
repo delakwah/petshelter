@@ -1,0 +1,35 @@
+{% extends "index.html" %} 
+{% load static %}
+
+{% block title %} Adopt Us! {% endblock %}
+
+{% block content %}
+
+<section id="adoptable-animals" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Adoptable Animals</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for z in adopt %}
+      <div class="col">
+        <a href="{% url 'details' z.id %}" class="text-decoration-none">
+          <div class="card h-100">
+            {% if z.pet_image.url %}
+              <img src="{{ z.pet_image.url }}" class="card-img-top" alt="{{z.name}}">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{z.name}}</h5>
+              <ul class="px-2">
+                <li>Breed: {{z.breed}}</li>
+                <li>Age:{{z.age}}</li>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+

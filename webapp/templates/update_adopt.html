@@ -1,0 +1,21 @@
+{% extends "index_admin.html" %}
+{% load static %}
+
+{% block title %}Update Pet{% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+    <h2>Update {{pet.name}}'s Info</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    <br>
+    {{ form.as_p }} 
+    <br>
+    <input type="submit" value="Update"
+    class="btn btn-success"></input>
+    <a href="{% url 'admin_panel' %}" class="btn btn-secondary">Back</a>
+</div>
+<br>
+
+{% endblock %}

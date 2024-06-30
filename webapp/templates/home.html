@@ -1,0 +1,80 @@
+{% extends "index.html" %} 
+{% load static %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+<section id="hero" class="bg-primary text-white text-center py-5" style="background-image: url('{% static "images/bg.jpg" %}')";>
+  <div class="container">
+    <h2>Welcome to Our Delacroix Animal Adoption Center!</h2>
+    <a href="{% url 'adopt' %}" class="btn btn-light mt-3">View Our Adoptable Animals</a>
+  </div>
+</section>
+
+<section id="featured-animals" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Featured Animals</h2>
+    <div class="row">
+      <div class="col-lg-4 d-flex align-items-center justify-content-center face">
+        <div class="text-center">
+          <h3>Meet your future paw best friends!</h3>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div id="animalCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static './images/miw.jpg' %}" class="d-block w-100" alt="Animal 1">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Animal 1</h5>
+                <p>Description of Animal 1</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static './images/hamster.jpg' %}" class="d-block w-100" alt="Animal 2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Animal 2</h5>
+                <p>Description of Animal 2</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static './images/cat.jpg' %}" class="d-block w-100" alt="Animal 3">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Animal 3</h5>
+                <p>Description of Animal 3</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#animalCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#animalCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>Brief overview of your organization's mission and values.</p>
+    <br>
+    <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
+  </div>
+</section>
+
+<section id="cta" class="py-5 text-center">
+  <div class="container">
+    <h2>Ready to Make a Difference?</h2>
+    <br>
+    <a href="{% url 'adopt' %}" class="btn btn-success me-2">Adopt an Animal</a>
+    <a href="{% url 'volunteer' %}" class="btn btn-warning">Volunteer with Us</a>
+  </div>
+</section>
+{% endblock %}

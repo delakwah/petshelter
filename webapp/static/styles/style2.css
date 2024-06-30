@@ -1,0 +1,82 @@
+/* .carousel{
+    width: 50%;
+    margin-left: auto;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+img {
+    height: 500px;
+}
+
+.navbar-nav {
+   margin-left: auto;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+#hero {
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+#hero h2 {
+    font-size: 2.5rem;
+  }
+  
+#featured-animals .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+footer nav ul li {
+    margin-left: 0;
+  }
+  
+footer nav ul li a {
+    color: #fff;
+  }
+
+.carousel{
+    width: 100%;
+    margin-left: auto;
+}
+
+img {
+  height: 500px;
+}
+
+#animal-details img{
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 45px; /* Adjust the size of the logo as needed */
+  height: auto;
+}
+
+.navbar-nav {
+    margin-left: auto;
+ }
+
+.face {
+    font-family: monospace;
+}
+
+
+
